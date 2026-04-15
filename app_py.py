@@ -19,7 +19,7 @@ df = pd.DataFrame(data)
 df["Mortality Rate (%)"] = (df["Deaths"] / df["Births"] * 100).round(2)
 
 # Header
-st.title("Handwashing Slashes Mortality by 54%")
+st.title("🧼 Dr. Ignaz Semmelweis: Handwashing Study")
 st.markdown("### The Impact of Hygiene on Hospital Mortality")
 st.write("In 1847, Dr. Semmelweis noticed a massive difference in death rates between two clinics. He suspected that handwashing could prevent 'childbed fever.'")
 
@@ -27,6 +27,14 @@ st.write("In 1847, Dr. Semmelweis noticed a massive difference in death rates be
 st.sidebar.header("Filters")
 selected_clinics = st.sidebar.multiselect("Select Clinics", ["Clinic 1", "Clinic 2"], default=["Clinic 1", "Clinic 2"])
 year_range = st.sidebar.slider("Select Year Range", 1841, 1849, (1841, 1849))
+
+# --- NEW SECTION: Group Member Names ---
+st.sidebar.markdown("---")
+st.sidebar.subheader("Project Team")
+st.sidebar.write("Pawan Chivukula")
+st.sidebar.write("Nimisha Ogra")
+st.sidebar.write("Jordyn Woodling")
+# ---------------------------------------
 
 # Data Filtering
 filtered_df = df[(df["Clinic"].isin(selected_clinics)) & (df["Year"].between(year_range[0], year_range[1]))]
