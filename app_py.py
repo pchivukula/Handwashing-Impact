@@ -19,7 +19,7 @@ df = pd.DataFrame(data)
 df["Mortality Rate (%)"] = (df["Deaths"] / df["Births"] * 100).round(2)
 
 # Header
-st.title("🧼 Dr. Ignaz Semmelweis: Handwashing Study")
+st.title("Handwashing Slashes Mortality by 54%")
 st.markdown("### The Impact of Hygiene on Hospital Mortality")
 st.write("In 1847, Dr. Semmelweis noticed a massive difference in death rates between two clinics. He suspected that handwashing could prevent 'childbed fever.'")
 
